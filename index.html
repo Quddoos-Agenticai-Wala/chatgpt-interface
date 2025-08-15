@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic ChatGPT Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            margin: 0;
+        }
+        .chat-container {
+            background: white;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            height: 80vh;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .chat-window {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+        }
+        .message {
+            padding: 8px 12px;
+            border-radius: 5px;
+            margin: 5px 0;
+            max-width: 80%;
+        }
+        .message.bot {
+            background: #e0e0e0;
+            align-self: flex-start;
+        }
+        .message.user {
+            background: #007bff;
+            color: white;
+            align-self: flex-end;
+        }
+        .input-area {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+        .input-area input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .input-area button {
+            margin-left: 10px;
+            padding: 8px 15px;
+            border: none;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .input-area button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-window">
+            <div class="message bot">Hello! How can I help you today?</div>
+            <div class="message user">Tell me a joke.</div>
+            <div class="message bot">Why did the computer go to therapy? Because it had too many bytes of emotional baggage!</div>
+        </div>
+        <div class="input-area">
+            <input type="text" placeholder="Type your message..." disabled>
+            <button disabled>Send</button>
+        </div>
+    </div>
+</body>
+</html>
